@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700&display=swap');
+@import url('imgmodal.css');
+@import url('timeline.css');
 @media only screen and (min-width: 600px) {
     .header h1 {
         font-size: 8vh;
@@ -8,31 +10,10 @@
         color: #fff;
         text-shadow: 0 0 5px black;
     }
-    .timeline::after {
-        left: 31px;
-    }
-    /* Full-width containers */
-    .container {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-    /* Make sure that all arrows are pointing leftwards */
-    .container::before {
-        left: 60px;
-        border: medium solid white;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent;
-    }
-    /* Make sure all circles are at the same spot */
-    .left::after,
-    .right::after {
-        left: 15px;
-    }
-    /* Make all right containers behave like the left ones */
-    .right {
-        left: 0%;
-    }
+}
+
+* {
+    box-sizing: border-box;
 }
 
 html {
@@ -53,6 +34,7 @@ body {
 
 h1 {
     font-weight: 400;
+    text-transform: uppercase;
 }
 
 img {
@@ -60,15 +42,14 @@ img {
     opacity: 0.8;
 }
 
-h1,
-h2 {
-    margin: 1rem 1rem 0rem;
+h1, h2 {
+    margin: 1rem 0rem 0rem 5rem;
     padding: 0;
 }
 
 p {
     color: #ddd;
-    margin: 0px 1rem 3rem 2rem;
+    margin: 0.5rem 0rem 3rem 6rem;
 }
 
 a {
@@ -82,12 +63,14 @@ a {
     color: #f2f2f2;
     text-shadow: 0 0 5px black;
     text-align: center;
+    margin-top: 1rem;
 }
 
 .teaser h1 {
     text-transform: uppercase;
     margin: 0rem 0rem 1rem 0rem;
 }
+
 .teaser h2 {
     margin: 0;
 }
@@ -97,40 +80,33 @@ a {
     top: 50%;
     width: 100%;
     transform: translate(0, -50%);
-    
 }
 
 .header {
     position: absolute;
     height: 100%;
     width: 100%;
-    line-height: 0.3;
+    line-height: 1;
     top: 100%;
     transform: translate(0, -50%);
     font-size: 3vh;
-    z-index: 3;
+    z-index: 1;
 }
 
 .header p {
-    padding: 2.5px;
     font-weight: bold;
     font-size: 4vh;
     color: #3A5795;
+    margin: 0 0 0 2rem;
 }
 
 .header h1 {
     font-size: 10vh;
     font-weight: 700;
-    line-height: 0.1;
-    margin-left: 31px;
+    line-height: 0.4;
+    margin-left: 30px;
     color: #fff;
     text-shadow: 0 0 5px black;
-}
-
-.joblog {
-    background-color: #637BAD;
-    margin-bottom: -33px;
-    color: #fff;
 }
 
 
@@ -138,7 +114,7 @@ a {
 
 .navbar {
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.3);
+    /* background: rgba(0, 0, 0, 0.3); */
     /* background-color: #637bad; */
     position: sticky;
     z-index: 1;
@@ -152,9 +128,10 @@ a {
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 8px 16px;
+    padding: 8px 0px;
     text-decoration: none;
     text-transform: uppercase;
+    margin-right: 25px;
 }
 
 .navbar a:hover {
@@ -162,121 +139,59 @@ a {
     color: #adb9d3;
 }
 
+/* Create four equal columns that sits next to each other */
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+    width: 80%;
+    margin: auto;
+  }
 
-/* The actual timeline (the vertical ruler) */
-
-.timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
+.col {
+    -ms-flex: 25%;
+    /* IE10 */
+    flex: 25%;
+    padding: 0 4px;
 }
 
-.timeline .content {
-    padding: 0px 0px 15px 0px;
-    /* background-color: white; */
-    position: relative;
-    border-radius: 6px;
-    top: 17px;
+.col img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
 }
 
-.timeline p {
+.project-warp {
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    width: 75%;
+    border: 3px solid #637bad;
+    padding: 10px;
+    bottom: 0;
+    margin-bottom: -5px;
+}
+
+.col h1 {
+    margin: 0;
+    padding: 0;
+}
+.col p {
+    margin: 0;
+    padding: 0;
+}
+
+.contact h1 {
+ margin: 0;
+}
+.contact p {
     margin: 0;
 }
 
-/* The actual timeline (the vertical ruler) */
-
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 4px;
-    background-color: white;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-}
-
-
-/* Container around content */
-
-.container {
-    padding: 5px 0px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
-}
-
-
-/* The circles on the timeline */
-
-/* .container::after {
-    content: '';
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: white;
-    border: 4px solid #637bad;
-    top: 20px;
-    border-radius: 50%;
-    z-index: 0;
-} */
-
-
-/* Place the container to the left */
-
-.left {
-    right: 50px;
-    padding: 2rem 10px 0px 0rem;
-    /* text-align: left; */
-    text-align: right;
-}
-
-/* Place the container to the right */
-
-.right {
-    left: 50%;
-    padding: 2rem 0 0 3rem;
-    text-align: left;
-}
-
-
-/* Add arrows to the left container (pointing right) */
-
-.left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 20px;
-    width: 0;
-    z-index: 1;
-    left: 100%;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
-}
-
-
-/* Add arrows to the right container (pointing left) */
-
-.right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 20px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-}
-
-
-/* Fix the circle for containers on the right side */
-
-.right::after {
-    left: -12px;
-}
-.left::after {
-    left: 637px;
+.contact {
+    background-color: #637BAD;
+    color: #ddd;
+    padding: 5rem;
 }

@@ -11,9 +11,10 @@
     <script src="js/parallax.min.js"></script>
     <!-- <script src="scripts/jquery-3.5.1.js"></script> -->
     <script>
-        $(function() {
+        $(function () {
             $("#skill").load("skill.html");
             $("#joblog").load("joblog.html");
+            $("#projects").load("projects.html");
         });
     </script>
 </head>
@@ -21,7 +22,7 @@
 <body>
 
     <div class="parallax-container" style="height: 850px;" id="home">
-        <img class="parallax" src="assets/bg_blueW.jpg" style="z-index: 2;opacity: 100;margin-top: 0px;">
+        <img class="parallax" src="assets/bg_blueW.jpg" style="opacity: 100;margin-top: 0px;">
 
         <div class="header">
             <p>I'am</p>
@@ -30,6 +31,7 @@
     </div>
     <div class="navbar">
         <a href="#contact">Contact</a>
+        <a href="#projects">projects</a>
         <a href="#experience">experience</a>
         <a href="#skill">SKILL</a>
         <a href="#home">home</a>
@@ -42,30 +44,35 @@
         <img class="parallax" src="assets/bg3.jpg" style="margin-top: -130px;">
         <div class="teaser">
             <div class="content">
-                <h1>experience</h1>
+                <h1 style="color:#adb9d3">experience</h1>
                 <div id="joblog"></div>
             </div>
         </div>
     </div>
 
- 
+    <article>
+        <div class="teaser">
+            <h1 style="color: #adb9d3;">Projects</h1>
+        </div>
 
-    <footer class="joblog" id="contact">
+        <div id="projects"></div>
+        </div>
+    </article>
+
+    <footer class="contact" id="contact">
         <h1>Resume Download</h1>
         <p>here</p>
         <h1>Contact</h1>
         <p>nitipon1988@outlook.com</p>
     </footer>
 
-    <article>
-        <h1>ผลงาน</h1>
-        <div style="height: 250px;"></div>
-    </article>
+
 
     <script>
         var parallax = new Parallax('.parallax');
         parallax.init();
     </script>
+
 </body>
 
 </html>
