@@ -8,7 +8,7 @@
     <title>NITIPON.C</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="scripts/parallax.min.js"></script>
+    <script src="js/parallax.min.js"></script>
     <!-- <script src="scripts/jquery-3.5.1.js"></script> -->
     <script>
         $(function() {
@@ -19,12 +19,7 @@
 </head>
 
 <body>
-    <div class="navbar">
-        <a href="#contact">Contact</a>
-        <a href="#experience">experience</a>
-        <a href="#skill">SKILL</a>
-        <a href="#home">home</a>
-    </div>
+
     <div class="parallax-container" style="height: 850px;" id="home">
         <img class="parallax" src="assets/bg_blueW.jpg" style="z-index: 2;opacity: 100;margin-top: 0px;">
 
@@ -32,6 +27,12 @@
             <p>I'am</p>
             <h1>NITIPON</h1>
         </div>
+    </div>
+    <div class="navbar">
+        <a href="#contact">Contact</a>
+        <a href="#experience">experience</a>
+        <a href="#skill">SKILL</a>
+        <a href="#home">home</a>
     </div>
     <article>
         <div id="skill"></div>
@@ -47,10 +48,7 @@
         </div>
     </div>
 
-    <article>
-        <h1>ผลงาน</h1>
-        <div style="height: 250px;"></div>
-    </article>
+ 
 
     <footer class="joblog" id="contact">
         <h1>Resume Download</h1>
@@ -58,6 +56,11 @@
         <h1>Contact</h1>
         <p>nitipon1988@outlook.com</p>
     </footer>
+
+    <article>
+        <h1>ผลงาน</h1>
+        <div style="height: 250px;"></div>
+    </article>
 
     <script>
         var parallax = new Parallax('.parallax');
