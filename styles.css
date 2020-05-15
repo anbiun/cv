@@ -37,6 +37,12 @@ h1 {
     text-transform: uppercase;
 }
 
+h3 {
+    font-weight: 600;
+    font-size: 45px;
+    text-transform: uppercase;
+}
+
 img {
     position: relative;
     opacity: 0.8;
@@ -109,7 +115,6 @@ a {
     text-shadow: 0 0 5px black;
 }
 
-
 /* nav section */
 
 .navbar {
@@ -140,15 +145,18 @@ a {
 }
 
 /* Create four equal columns that sits next to each other */
+
 .row {
-    display: -ms-flexbox; /* IE10 */
+    display: -ms-flexbox;
+    /* IE10 */
     display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
+    -ms-flex-wrap: wrap;
+    /* IE10 */
     flex-wrap: wrap;
     padding: 0 4px;
     width: 80%;
     margin: auto;
-  }
+}
 
 .col {
     -ms-flex: 25%;
@@ -178,14 +186,16 @@ a {
     margin: 0;
     padding: 0;
 }
+
 .col p {
     margin: 0;
     padding: 0;
 }
 
 .contact h1 {
- margin: 0;
+    margin: 0;
 }
+
 .contact p {
     margin: 0;
 }
