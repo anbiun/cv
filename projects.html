@@ -1,33 +1,96 @@
-<div class="project-warp">
+<script>
+    $(function () {
+        $("#carosel_flp").load("carosel_flp.html");
+        $("#carosel_inv").load("carosel_inv.html");
+    });
+</script>
+<div id="carosel_inv"></div>
+</div>
+<div id="carosel_flp"></div>
+</div>
+
+<div class="project-warp" style="color: white;">
+    <div class="row" align="center">
+        <div class="col">
+            <h1>UOB NSBR</h1>
+        </div>
+        <div class="col">
+            <h1>UOB ACL</h1>
+        </div>
+    </div>
+
     <div class="row">
         <div class="col">
-            <h3>uob amfis frd</h3>
-        </div>
-
-        <div class="col">
-            <p>ระบบ FRD 
-            </p>
-        </div>
-
-        <div class="col">
-            <img id="imgModal" src="assets/Screenshot (61).png" width="100%">
+            <img id="imgnsbr" src="assets/UOB-NSBR.png" onclick="changID(this.id)" width="100%">
             <div id="divModal" class="modal">
-
+                <span class="close">&times;</span>
+                <img class="modal-content" id="imgContent">
+            </div>
+        </div>
+        <div class="col">
+            <img id="imgacl" src="assets/UOB-ACL.png" onclick="changID(this.id)" width="100%">
+            <div id="divModal" class="modal">
                 <!-- The Close Button -->
                 <span class="close">&times;</span>
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content" id="imgContent">
+            </div>
+        </div>
+    </div>
 
+    <div class="row" align="center">
+        <div class="col">
+            <h1>UOB FRD</h1>
+        </div>
+        <div class="col">
+            <h1>UOB SRF</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <img id="imgfrd" src="assets/UOB-FRD.png" onclick="changID(this.id)" width="100%">
+            <div id="divModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="imgContent">
+            </div>
+        </div>
+        <div class="col">
+            <img id="imgsrf" src="assets/UOB-SRF.png" onclick="changID(this.id)" width="100%">
+            <div id="divModal" class="modal">
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
                 <!-- Modal Content (The Image) -->
                 <img class="modal-content" id="imgContent">
             </div>
         </div>
     </div>
 </div>
+
 <script>
+    
+    function changID(id) {
+        var modal = document.getElementById("divModal");
+        var img = document.getElementById(id);
+        var modalImg = document.getElementById("imgContent");
+
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+    }
+    /*
     // Get the modal
     var modal = document.getElementById("divModal");
 
     // Get the image and insert it inside the modal - use its "alt" text as a caption
-    var img = document.getElementById("imgModal");
+    var img = document.getElementById("imgrow1");
     var modalImg = document.getElementById("imgContent");
     img.onclick = function () {
         modal.style.display = "block";
@@ -41,4 +104,5 @@
     span.onclick = function () {
         modal.style.display = "none";
     }
+    */
 </script>
